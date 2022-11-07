@@ -1,0 +1,21 @@
+@use '../../style/partials/breakpoints' as *;
+
+.main-logo {
+    margin: 0;
+    line-height: 0;
+    width: 100%;
+    text-align: center;
+
+    &--image {
+        max-width: 120px;
+        max-height: 25px;
+    }
+}
+
+@include tablet {
+    .main-logo {
+        padding: 10px;
+        width: calc(25%);
+        text-align: start;
+    }
+}

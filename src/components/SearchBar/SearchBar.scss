@@ -1,0 +1,39 @@
+@import '../../style/partials/breakpoints';
+@import '../../style/partials/colors';
+
+.search-bar {
+
+    width: calc(100% - 60px);
+
+    &--bar {
+        position:inherit;
+        background-color: $brainflix-alabaster;
+        padding: 10px 0 10px 40px;
+        background-image: url('../../assets/images/search.svg');
+        background-repeat: no-repeat;
+        position: relative;
+        background-position: clamp(1%, 5%, 15px);
+        font-size: 12px;
+        line-height: 20px;
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid $brainflix-mercury;
+
+        &::placeholder {
+            color: $brainflix-black;
+        }
+
+        &:focus {
+            outline: none;
+            border: 2px solid $brainflix-blue;
+        }
+    }
+}
+
+@include tablet {
+
+    .search-bar {
+        max-width: 220px;
+
+    }
+}

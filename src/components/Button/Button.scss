@@ -1,0 +1,50 @@
+@use '../../style/partials/breakpoints' as *;
+@import '../../style/partials/colors';
+
+
+.button {
+    
+    background-size: 18px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: $brainflix-blue;
+    padding: 0 32px 0 40px;
+    color: $brainflix-white;
+    font-size: 14px;
+    border: 2px solid transparent;
+    min-width: 150px;
+    font-family: MainFontBold;
+    width: 100%;
+
+    &:hover {
+        background-color: $brainflix-darkblue;
+        cursor: pointer;
+    }
+
+    &__comment {
+        background-image: url('../../assets/images/add_comment.svg');
+        background-repeat: no-repeat;
+        position: relative;
+        background-position: 7%;
+        &::before{
+            content: 'COMMENT';
+        }
+    }
+
+    &__upload {
+        background-image: url('../../assets/images/upload.svg');
+        background-repeat: no-repeat;
+        position: relative;
+        background-position: 7%;
+        &::before{
+            content: 'UPLOAD';
+        }
+    }
+}
+
+@include tablet {
+
+    .button {
+        width: 200px
+    };
+}
