@@ -14,7 +14,7 @@ const LikeAndView = () => {
                     src={viewIcon}
                     alt="viewIcon"
                 ></img>
-                <p>1,001,023</p>
+                <p className='silver'>1,001,023</p>
             </div>
             <div className='container__like'>
                 <img 
@@ -22,7 +22,7 @@ const LikeAndView = () => {
                     src={likeIcon}
                     alt="like icon"
                 ></img>
-                <p>1,001,023</p>
+                <p className='silver'>1,001,023</p>
             </div>
         </div>
     )

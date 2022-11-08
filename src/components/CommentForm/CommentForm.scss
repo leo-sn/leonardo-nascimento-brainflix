@@ -1,0 +1,82 @@
+@use '../../style/partials/breakpoints' as *;
+@import '../../style/partials/colors';
+
+
+
+h3 {
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 5px;
+}
+.comment-form-container {
+    display: flex;
+
+    &__profile-icon {
+        margin-top: 20px;
+        padding-right: 2%;
+    }
+
+    &__form {
+        background-color: $brainflix-alabaster;
+        font-size: 13px;
+        color: $brainflix-black;
+        border: 1px solid $brainflix-mercury;
+        min-width: 240px;
+        min-height: 36px;
+        padding: 12px;
+        border-radius: 4px;
+        width: 100%;
+        margin-bottom: 14px;
+        height: 100px;
+        text-align: start;
+        resize: none;
+        
+        &::placeholder {
+            color: $brainflix-black;
+        }
+
+        &:focus-visible {
+            border: 2px solid $brainflix-blue;
+            padding: 11px;
+        }
+    }
+
+    &__input-area {
+        width: 100%;
+    }
+}
+
+@include tablet {
+
+    .comment-form-container {
+    
+        &__profile-icon {
+            margin-top: 26px;
+            padding-right: 2%;
+        }
+    
+        &__form {
+
+            min-height: 40px;
+            max-height: 16px;
+            line-height: 14px;
+            max-width: 100%;
+            font-size: 14px;
+            overflow:auto;
+
+        }
+    
+        &__input-area {
+            width: 100%;
+
+            &--form {
+                display: flex;
+                justify-content: space-between;
+                gap: 10px;
+            }
+        }
+    }
+    
+}
