@@ -12,7 +12,7 @@ const MainContent = () => {
                 <div className='video-data'>
                     <VideoInfo />
                     <CommentForm />
-                    <CommentSection/>
+                    <CommentSection/> 
                 </div>
                 <div className='related-container'>
                     <RelatedVideos />

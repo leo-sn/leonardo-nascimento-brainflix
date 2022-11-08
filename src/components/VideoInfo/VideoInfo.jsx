@@ -3,7 +3,7 @@ import './VideoInfo.scss'
 const VideoInfo = () => {
 
     return (
-        <div>VideoInfo</div>
+        <h1>Default Title</h1>
     );
 }
 

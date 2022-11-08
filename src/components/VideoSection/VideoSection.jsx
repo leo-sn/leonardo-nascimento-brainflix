@@ -1,10 +1,14 @@
 import './VideoSection.scss'
 
-const VideoSection = () => {
+const VideoSection = (props) => {
 
     return (
-        <div className="video-section">
-            VIDEO SECTION
+        <div className='video-container'>
+            <video 
+                controls poster={props.poster} 
+                src="">
+
+            </video>
         </div>
     )
 }
