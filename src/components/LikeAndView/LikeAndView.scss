@@ -1,0 +1,37 @@
+@use '../../style/partials/breakpoints' as *;
+@import '../../style/partials/colors';
+
+.container {
+    p {
+        color: $brainflix-silver;
+        font-size: 16px
+    }
+
+    &__view {
+        display: flex;
+        gap: 5px;
+        margin-bottom: 16px;
+
+        &--icon {
+            width: 20px;
+        }
+    }
+
+    &__like {
+
+        display: flex;
+        gap: 5px;
+        margin-bottom: 16px;
+
+        &--icon {
+            width: 20px;
+        }
+    }
+}
+
+@include tablet {
+    .container {
+        display: flex;
+        gap: 20px;
+    }
+}

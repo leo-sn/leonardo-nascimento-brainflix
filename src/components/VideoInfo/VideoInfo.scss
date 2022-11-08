@@ -1,0 +1,39 @@
+@use '../../style/partials/breakpoints' as *;
+@import '../../style/partials/colors';
+
+h1 {
+    margin-bottom: 16px;
+}
+
+
+
+.video-info-container {
+
+    padding: 0 16px;
+    
+    p {
+        color: $brainflix-silver;
+        font-size: 16px
+    }
+
+    &__data {
+        display: flex;
+        gap: calc(35%);
+    }
+
+}
+
+@include tablet { 
+
+    .video-info-container {
+        &__data {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    .divider:nth-child(2) {
+        display: none;
+        background-color: red;
+    }
+
+}

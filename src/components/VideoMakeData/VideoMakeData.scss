@@ -1,0 +1,17 @@
+@use '../../style/partials/breakpoints' as *;
+@import '../../style/partials/colors';
+
+.video-information-container {
+
+    h3 {
+        margin-bottom: 16px;
+    }
+
+}
+
+@include tablet {
+    .video-information-container {
+        display: flex;
+        gap: 30px;
+    }
+}
