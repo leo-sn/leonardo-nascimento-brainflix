@@ -1,0 +1,17 @@
+.new-comment-container {
+    display: flex;
+
+    &__profile-img {
+        padding-right: 20px;
+    }
+}
+
+.comment-container{
+
+    margin-bottom: 16px;
+    
+    &__header {
+    display: flex;
+    justify-content: space-between;
+    }
+}

@@ -4,7 +4,6 @@ const ProfileIcon = () => {
 
     return (
        <div className='profile-icon'></div>
-
     )
 }
 

@@ -1,8 +1,17 @@
+@use '../../style/partials/breakpoints' as *;
+
 .profile-icon {
     background-image: url('../../assets/images/Mohan-muruge.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 42px;
-    width: 42px;
-    border-radius: 26px;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+}
+
+@include tablet {
+    .profile-icon {
+        height: 40px;
+        width:40px;
+    }
 }
