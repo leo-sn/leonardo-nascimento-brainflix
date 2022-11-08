@@ -1,6 +1,10 @@
 @use '../../style/partials/breakpoints' as *;
 @import '../../style/partials/colors';
 
+* {
+    box-sizing: border-box;
+}
+
 h1 {
     margin-bottom: 16px;
 }
@@ -9,12 +13,8 @@ h1 {
 
 .video-info-container {
 
-    padding: 0 16px;
-    
-    p {
-        color: $brainflix-silver;
-        font-size: 16px
-    }
+    width: 100%;
+    margin-bottom: 16px;
 
     &__data {
         display: flex;
@@ -26,11 +26,16 @@ h1 {
 @include tablet { 
 
     .video-info-container {
+        margin-bottom: 24px;
+
         &__data {
             display: flex;
             justify-content: space-between;
+            align-items: center;
+            gap: 0;
         }
     }
+    
     .divider:nth-child(2) {
         display: none;
         background-color: red;

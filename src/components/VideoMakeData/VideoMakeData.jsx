@@ -6,7 +6,7 @@ const VideoMakeData = () => {
 
         <div className='video-information-container'>
             <h3>By Red Crow</h3>
-            <p>07/11/2021</p>
+            <p className='silver'>07/11/2021</p>
         </div>
     )
 }
