@@ -1,9 +1,13 @@
-import './VideoInfo.scss'
+import './VideoInfo.scss';
+import Divider from '../Divider/Divider';
 
 const VideoInfo = () => {
 
     return (
-        <h1>Default Title</h1>
+        <>
+            <h1>Default Title</h1>
+            <Divider />
+        </>
     );
 }
 

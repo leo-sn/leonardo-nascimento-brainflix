@@ -1,2 +1,6 @@
 @use '../../style/partials/breakpoints' as *;
+@import '../../style/partials/colors';
 
+.divider {
+    border: solid 1px $brainflix-mercury;
+}
