@@ -1,9 +1,12 @@
 import './RelatedVideos.scss'
-
+import NextVideoCard from '../NextVideoCard/NextVideoCard'
 const RelatedVideos = () => {
 
     return (
-        <div>RelatedVideos</div>
+        <div className='related-video-container'>
+            <p className='silver bold'>NEXT VIDEOS</p> 
+            <NextVideoCard />
+        </div>
     )
 }
 
