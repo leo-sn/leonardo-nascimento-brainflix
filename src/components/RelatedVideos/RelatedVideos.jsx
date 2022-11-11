@@ -5,6 +5,9 @@ import allVideos from '../../data/video-details.json'
 
 const RelatedVideos = (props) => {
 
+    console.log('RELATED-VIDEOS-PROPS', props)
+
+
     return (
         <div className='related-video-container'>
             <p className='silver bold'>NEXT VIDEOS</p> 

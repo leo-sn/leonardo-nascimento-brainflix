@@ -2,6 +2,8 @@ import './NextVideoCard.scss'
 
 const NextVideoCard = (props) => {
 
+    console.log(props)
+
     const { title, image, channel } = props;
 
     return (

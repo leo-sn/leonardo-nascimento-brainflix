@@ -12,12 +12,11 @@ function App() {
 
   const [videoSelected, setVideoSelected] = useState(firstLoad[0]);
 
-  function handleSelectVideo() {
+  const handleSelectedVideo = (event) => {
   //Create function that when a relatedVideo is clicked, all the information
   //about that video will be passed as videoSelected by setVideoSelected.
 
-    return console.log('videoHandled')
-
+    return console.log('videoHandled', event)
   }
 
 
@@ -29,7 +28,7 @@ function App() {
     <div className="App">
      <NavBar />
      <VideoSection poster={image} video={''} />
-     <MainContent APIdata={firstLoad} selectedVideoContent={videoSelected} handleSelectVideo={handleSelectVideo}/>
+     <MainContent APIdata={firstLoad} selectedVideoContent={videoSelected} handleSelectedVideo={handleSelectedVideo}/>
     </div>
   );
 }
