@@ -12,7 +12,7 @@ const MainContent = (props) => {
     //selectedVideoContent={videoSelected}
     //handleSelectVideo={handleSelectVideo}
 
-    const {title, views, likes, timestamp, channel, comments } = props.selectedVideoContent;
+    const {title, views, likes, timestamp, channel, comments, description } = props.selectedVideoContent;
     
     return (
 
@@ -24,6 +24,7 @@ const MainContent = (props) => {
                         views={views} 
                         likes={likes}
                         timestamp={timestamp} 
+                        description={description}
                         channel={channel}/>
                     <CommentForm />
                     <CommentSection comments={comments}/> 

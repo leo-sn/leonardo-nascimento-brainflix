@@ -26,9 +26,13 @@ function App() {
 
   return (
     <div className="App">
-     <NavBar />
-     <VideoSection poster={image} video={''} />
-     <MainContent APIdata={firstLoad} selectedVideoContent={videoSelected} handleSelectedVideo={handleSelectedVideo}/>
+      <NavBar />
+      <VideoSection poster={image} video={''} />
+      <MainContent 
+        APIdata={firstLoad} 
+        selectedVideoContent={videoSelected} 
+        handleSelectedVideo={handleSelectedVideo}
+      />
     </div>
   );
 }
