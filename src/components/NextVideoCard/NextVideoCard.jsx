@@ -1,17 +1,17 @@
 import './NextVideoCard.scss'
-import currentSrc from '../../assets/images/thumbnail.png'
 
+const NextVideoCard = (props) => {
 
-const NextVideoCard = () => {
+    const { title, image, channel } = props;
 
     return (
         <div className='next-video-card-container'>
             <div className='next-video-card-container--img'>
-                <img src={currentSrc} ></img>
+                <img src={image}></img>
             </div>
             <div className='next-video-card-container--info'>
-                <p className='bold'>Become A Travel Pro In One Easy lesson</p>
-                <p>Todd Welch</p>
+                <p className='bold'>{title}</p>
+                <p>{channel}</p>
             </div>
         </div>
     )

@@ -1,11 +1,28 @@
 import './RelatedVideos.scss'
 import NextVideoCard from '../NextVideoCard/NextVideoCard'
-const RelatedVideos = () => {
+import allVideos from '../../data/video-details.json'
+
+
+const RelatedVideos = (props) => {
 
     return (
         <div className='related-video-container'>
             <p className='silver bold'>NEXT VIDEOS</p> 
-            <NextVideoCard />
+
+            {allVideos.map((video) => {
+                return(
+                    video.id != props.selectedVideoContent.id &&
+                    <NextVideoCard
+                        onClick={props.handleSelectedVideo}
+                        key = {video.id} 
+                        id = {video.id}
+                        image = {video.image}
+                        channel = {video.channel}
+                        title = {video.title}
+                    />
+                )
+            })}
+
         </div>
     )
 }

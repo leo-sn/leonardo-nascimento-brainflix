@@ -1,12 +1,24 @@
 import './VideoMakeData.scss'
 
-const VideoMakeData = () => {
+const VideoMakeData = (props) => {
+
+    console.log('videoMakeData props',props)
+
+    const {channel, timestamp} = props
+
+    let videoDate = timestamp
+
+    function formatDateComments (timestamp){
+        var date = new Date(timestamp)
+        const videoDate = date.toISOString().replaceAll('-','/').split('T')[0];
+        return videoDate
+    }
 
     return (
 
         <div className='video-information-container'>
-            <h3>By Red Crow</h3>
-            <p className='silver'>07/11/2021</p>
+            <h3>{channel}</h3>
+            <p className='silver'>{formatDateComments(videoDate)}</p>
         </div>
     )
 }

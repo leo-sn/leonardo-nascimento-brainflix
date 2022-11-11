@@ -3,14 +3,14 @@ import Divider from '../Divider/Divider';
 import VideoMakeData from '../VideoMakeData/VideoMakeData';
 import LikeAndView from '../LikeAndView/LikeAndView'
 
-const VideoInfo = () => {
+const VideoInfo = (props) => {
 
     return (
         <div className='video-info-container'>
-            <h1>BMX Rampage: 2021 Highlights</h1>
+            <h1>{props.title}</h1>
             <Divider />
             <div className='video-info-container__data'>
-                <VideoMakeData />
+                <VideoMakeData channel={props.channel} timestamp={props.timestamp}/>
                 <LikeAndView />
             </div>
             <Divider />
