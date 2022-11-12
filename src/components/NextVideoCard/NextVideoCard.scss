@@ -6,7 +6,8 @@
     gap: 20px;
     width: 100%;
 
-    &--img {
+    &:hover{
+        cursor: pointer;
     }
 
     img {

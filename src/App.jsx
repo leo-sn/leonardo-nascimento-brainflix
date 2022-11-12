@@ -10,24 +10,27 @@ import firstLoad from './data/video-details.json';
 
 function App() {
 
-  const [videoSelected, setVideoSelected] = useState(firstLoad[0]);
+  const [videoSelected, setVideoSelected] = useState(firstLoad[2]);
 
-  const handleSelectedVideo = (event) => {
+  const handleSelectedVideo = (clickedId) => {
   //Create function that when a relatedVideo is clicked, all the information
   //about that video will be passed as videoSelected by setVideoSelected.
-
-    return console.log('videoHandled', event)
+    firstLoad.map((object) => {
+      object.id === clickedId && setVideoSelected(object)
+    })
   }
 
+  // const selectedIndex = event.target.options.selectedIndex;
 
 
-  const {image, video, id} = videoSelected;
-  
+
+
+  const {image, video } = videoSelected;
 
   return (
     <div className="App">
       <NavBar />
-      <VideoSection poster={image} video={''} />
+      <VideoSection poster={image} video={video} />
       <MainContent 
         APIdata={firstLoad} 
         selectedVideoContent={videoSelected} 

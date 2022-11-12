@@ -6,12 +6,6 @@ import RelatedVideos from '../RelatedVideos/RelatedVideos';
 
 const MainContent = (props) => {
 
-    console.log('MAIN-CONTENT-PROPS', props)
-
-    //APIdata={firstLoad} 
-    //selectedVideoContent={videoSelected}
-    //handleSelectVideo={handleSelectVideo}
-
     const { title, 
             views, 
             likes, 
@@ -39,8 +33,8 @@ const MainContent = (props) => {
                 <div className='related-container'>
                     <RelatedVideos
                     selectedVideoContent={props.selectedVideoContent}
-                    handleSelectedVideo={props.handleSelectVideo}
-                    APIdata={props.firstLoad}
+                    handleSelectedVideo={props.handleSelectedVideo}
+                    APIdata={props.APIdata}
                     />
                 </div>
             </div>

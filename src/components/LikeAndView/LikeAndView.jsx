@@ -3,7 +3,7 @@ import viewIcon from '../../assets/images/views.svg';
 import likeIcon from '../../assets/images/likes.svg';
 
 
-const LikeAndView = () => {
+const LikeAndView = (props) => {
 
     return (
         <div className='container'>
@@ -14,7 +14,7 @@ const LikeAndView = () => {
                     src={viewIcon}
                     alt="viewIcon"
                 ></img>
-                <p className='silver'>1,001,023</p>
+                <p className='silver'>{props.views}</p>
             </div>
             <div className='container__like'>
                 <img 
@@ -22,7 +22,7 @@ const LikeAndView = () => {
                     src={likeIcon}
                     alt="like icon"
                 ></img>
-                <p className='silver'>1,001,023</p>
+                <p className='silver'>{props.likes}</p>
             </div>
         </div>
     )

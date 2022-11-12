@@ -2,14 +2,13 @@ import './NextVideoCard.scss'
 
 const NextVideoCard = (props) => {
 
-    console.log(props)
-
-    const { title, image, channel } = props;
+    const { title, image, channel, id } = props;
 
     return (
-        <div className='next-video-card-container'>
+        <div className='next-video-card-container' 
+            onClick={() => {props.handleSelectedVideo(id)}}>
             <div className='next-video-card-container--img'>
-                <img src={image}></img>
+                <img src={image} alt="thumbnail"></img>
             </div>
             <div className='next-video-card-container--info'>
                 <p className='bold'>{title}</p>

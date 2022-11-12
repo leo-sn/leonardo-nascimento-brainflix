@@ -11,7 +11,7 @@ const VideoInfo = (props) => {
             <Divider />
             <div className='video-info-container__data'>
                 <VideoMakeData channel={props.channel} timestamp={props.timestamp}/>
-                <LikeAndView />
+                <LikeAndView likes={props.likes} views={props.views}/>
             </div>
             <Divider />
             <p>{props.description}</p>

@@ -2,8 +2,6 @@ import './VideoMakeData.scss'
 
 const VideoMakeData = (props) => {
 
-    console.log('videoMakeData props',props)
-
     const {channel, timestamp} = props
 
     let videoDate = timestamp
