@@ -16,8 +16,6 @@ function Home() {
     })
   }
 
-  // const selectedIndex = event.target.options.selectedIndex;
-
   const {image, video } = videoSelected;
 
   return (
@@ -28,7 +26,6 @@ function Home() {
         APIdata={firstLoad} 
         selectedVideoContent={videoSelected} 
         handleSelectedVideo={handleSelectedVideo}
-        
       />
     </div>
   );

@@ -40,6 +40,16 @@
             content: 'UPLOAD';
         }
     }
+
+    &__publish {
+        background-image: url('../../assets/images/upload.svg');
+        background-repeat: no-repeat;
+        position: relative;
+        background-position: 7%;
+        &::before{
+            content: 'PUBLISH';
+        }
+    }
 }
 
 @include tablet {
