@@ -1,42 +1,17 @@
 import './App.scss';
-import React , { useState } from 'react';
-import NavBar from './components/Navbar/NavBar';
-import VideoSection from './components/VideoSection/VideoSection';
-import MainContent from './components/MainContent/MainContent';
-import firstLoad from './data/video-details.json';
-
-
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home/Home'
+import Upload from './pages/Upload/Upload'
 
 function App() {
 
-  const [videoSelected, setVideoSelected] = useState(firstLoad[2]);
-
-  const handleSelectedVideo = (clickedId) => {
-  //Create function that when a relatedVideo is clicked, all the information
-  //about that video will be passed as videoSelected by setVideoSelected.
-    firstLoad.map((object) => {
-      object.id === clickedId && setVideoSelected(object)
-    })
-  }
-
-  // const selectedIndex = event.target.options.selectedIndex;
-
-
-
-
-  const {image, video } = videoSelected;
-
   return (
-    <div className="App">
-      <NavBar />
-      <VideoSection poster={image} video={video} />
-      <MainContent 
-        APIdata={firstLoad} 
-        selectedVideoContent={videoSelected} 
-        handleSelectedVideo={handleSelectedVideo}
-      />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>}></Route>
+        <Route path="/Upload" element={<Upload/>}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
