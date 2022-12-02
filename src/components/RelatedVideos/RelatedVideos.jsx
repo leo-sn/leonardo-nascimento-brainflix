@@ -9,7 +9,7 @@ const RelatedVideos = (props) => {
 
             {props.APIdata.map((video) => {
                 return(
-                    video.id != props.selectedVideoContent.id &&
+                    video.id !== props.selectedVideoContent.id &&
                     <NextVideoCard
                         handleSelectedVideo = {props.handleSelectedVideo}
                         key = {video.id} 
