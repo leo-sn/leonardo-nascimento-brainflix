@@ -35,10 +35,17 @@ h1 {
             gap: 0;
         }
     }
-    
-    .divider:nth-child(2) {
+
+    .video-info__divider {
         display: none;
         background-color: red;
     }
+    
+   
+
+    // .divider:nth-child(2) {
+    //     display: none;
+    //     background-color: red;
+    // }
 
 }

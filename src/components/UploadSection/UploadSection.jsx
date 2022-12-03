@@ -1,12 +1,12 @@
 import '../UploadSection/UploadSection.scss';
-import Button from '../../components/Button/Button'
+import UploadContent from '../UploadContent/UploadContent';
 
 const UploadSection = () => {
 
     return (
-            <div className='main-container'>
+            <div className='upload-page-container'>
                 <h1>Upload Video</h1>
-                <Button className="navbar__sub-container--button" type='publish'/>
+                <UploadContent />
             </div>                      
     )
 }   

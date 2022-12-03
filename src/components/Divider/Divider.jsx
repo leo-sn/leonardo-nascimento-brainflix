@@ -1,9 +1,11 @@
 import '../Divider/Divider.scss'
 
-const Divider = () => {
+const Divider = (props) => {
+
+    console.log(props)
 
     return (
-        <hr className='divider'></hr>
+        <hr className={`divider ${props.className ? props.className : ''}`}></hr>
     )
 }
 

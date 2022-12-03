@@ -8,7 +8,7 @@ const VideoInfo = (props) => {
     return (
         <div className='video-info-container'>
             <h1>{props.title}</h1>
-            <Divider />
+            <Divider className="video-info__divider"/>
             <div className='video-info-container__data'>
                 <VideoMakeData channel={props.channel} timestamp={props.timestamp}/>
                 <LikeAndView likes={props.likes} views={props.views}/>
