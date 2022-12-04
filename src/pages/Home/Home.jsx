@@ -48,6 +48,7 @@ function Home() {
 
   return (
     <>
+    {!videoSelected && <h1>Loading BrainFlix...</h1>}
     { videoSelected &&
       <div>
         <NavBar />
