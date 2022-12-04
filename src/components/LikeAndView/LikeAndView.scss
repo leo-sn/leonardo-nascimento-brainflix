@@ -11,10 +11,11 @@
     &__view {
         display: flex;
         gap: 5px;
-        margin-bottom: 16px;
+        align-items: center;
 
         &--icon {
             width: 20px;
+            margin: 10px 0;
         }
     }
 
@@ -22,7 +23,6 @@
 
         display: flex;
         gap: 5px;
-        margin-bottom: 16px;
 
         &--icon {
             width: 20px;
@@ -34,5 +34,21 @@
     .container {
         display: flex;
         gap: 20px;
+        align-items: center;
+
+        p {
+            line-height: 45px;
+        }
+
+        &__like {
+
+            display: flex;
+            gap: 5px;
+            
+            &--icon {
+                width: 20px;
+                margin-top: 15px;
+            }
+        }
     }
 }
