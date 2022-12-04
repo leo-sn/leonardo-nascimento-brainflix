@@ -2,26 +2,31 @@ import React , { useState, useEffect } from 'react';
 import NavBar from '../../components/Navbar/NavBar'
 import VideoSection from '../../components/VideoSection/VideoSection';
 import MainContent from '../../components/MainContent/MainContent';
-import firstLoad from '../../data/video-details.json';
 import axios from 'axios'
+import { useParams } from 'react-router-dom';
 
 function Home() {
 
-  const [videoSelected, setVideoSelected] = useState(firstLoad[2]);
+  const [videoSelected, setVideoSelected] = useState();
   const [videos, setVideos] = useState([]);
   const [apiKey, setApiKey] = useState('');
+  const { videoId } = useParams();
+  
 
   useEffect(() => {
-    if(!apiKey) {
       axios.get('https://project-2-api.herokuapp.com/register')
       .then((res) => {
-        setApiKey(res.data);
+        setApiKey(res.data.api_key)
+        console.log('apiKey request:',res.data.api_key)
         }
       )
-    } else {
-      return apiKey;
-    }
   },[])
+
+  useEffect(() => {
+    axios.get(`https://project-2-api.herokuapp.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8?api_key=${apiKey}`)
+    .then(res => setVideoSelected(res.data))
+    .then(console.log(videoSelected))
+  },[apiKey])
 
   useEffect(() => {
     getVideosList()
@@ -34,28 +39,26 @@ function Home() {
     })
   }
 
-  const handleSelectedVideo = (clickedId) => {
-  //Create function that when a relatedVideo is clicked, all the information
-  //about that video will be passed as videoSelected by setVideoSelected.
-    // firstLoad.map((object) => {
-    //   return object.id === clickedId && setVideoSelected(object)
-    // })
-    axios.get(`https://project-2-api.herokuapp.com/videos/${clickedId}?api_key=${apiKey}`)
+  useEffect( () => {
+    axios.get(`https://project-2-api.herokuapp.com/videos/${videoId}?api_key=${apiKey}`)
     .then(res => setVideoSelected(res.data))
-  }
+    window.scrollTo(0, 0);
+  }, [apiKey, videoId])
 
-  const {image, video } = videoSelected;
 
   return (
-    <div>
-      <NavBar />
-      <VideoSection poster={image} video={video} />
-      <MainContent 
-        APIdata={videos} 
-        selectedVideoContent={videoSelected} 
-        handleSelectedVideo={handleSelectedVideo}
-      />
-    </div>
+    <>
+    { videoSelected &&
+      <div>
+        <NavBar />
+        <VideoSection poster={videoSelected.image} video={videoSelected.video} />
+        <MainContent 
+          APIdata={videos} 
+          selectedVideoContent={videoSelected} 
+        />
+      </div>
+    } 
+    </>
   );
 }
 

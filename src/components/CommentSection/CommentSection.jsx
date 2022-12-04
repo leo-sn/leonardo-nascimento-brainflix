@@ -9,12 +9,13 @@ const CommentSection = (props) => {
             {props.sentComments.map(comment => {
                 return(
                     <>
-                        <Divider />
                         <NewComment 
                             comment={comment.comment} 
                             name={comment.name} 
                             timestamp={comment.timestamp}
+                        
                         />
+                        <Divider />
                     </>
                 )
             })}

@@ -1,6 +1,7 @@
 import ProfileIcon from '../ProfileIcon/ProfileIcon';
 import './CommentForm.scss';
 import Button from '../Button/Button'
+import Divider from '../Divider/Divider'
 
 
 const CommentForm = () => {
@@ -20,6 +21,7 @@ const CommentForm = () => {
                     </div>
                 </div>
             </div>
+            <Divider />
       </>
     )
 }
