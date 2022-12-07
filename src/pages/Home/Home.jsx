@@ -9,7 +9,7 @@ function Home() {
 
   const [videoSelected, setVideoSelected] = useState();
   const [videos, setVideos] = useState([]);
-  const [apiKey, setApiKey] = useState('');
+  const [apiKey, setApiKey] = useState(null);
   const { videoId } = useParams();
   
 
@@ -17,19 +17,17 @@ function Home() {
       axios.get('https://project-2-api.herokuapp.com/register')
       .then((res) => {
         setApiKey(res.data.api_key)
-        console.log('apiKey request:',res.data.api_key)
         }
       )
   },[])
 
   useEffect(() => {
-    axios.get(`https://project-2-api.herokuapp.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8?api_key=${apiKey}`)
-    .then(res => setVideoSelected(res.data))
-    .then(console.log(videoSelected))
+    if(apiKey){ axios.get(`https://project-2-api.herokuapp.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8?api_key=${apiKey}`)
+    .then(res => setVideoSelected(res.data))}
   },[apiKey])
 
   useEffect(() => {
-    getVideosList()
+    apiKey && getVideosList()
   },[apiKey])
 
   function getVideosList() {
