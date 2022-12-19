@@ -18,7 +18,7 @@ const NavBar = () => {
             <ProfileIcon className="navbar__sub-container--profile-image" />
             <div className='navbar__sub-container--button-container'>
                 <Link to="/upload">
-                    <Button className="navbar__sub-container--button" type='upload'/>
+                    <Button className="navbar__sub-container--button" kind='upload'/>
                 </Link>
             </div>
         </div>

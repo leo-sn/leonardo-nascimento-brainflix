@@ -16,7 +16,7 @@ const CommentForm = () => {
                         <p className='silver'>JOIN THE CONVERSATION</p>
                         <div className="comment-form-container__input-area--form">
                             <textarea className="comment-form-container__form" placeholder="Add a new Comment"></textarea>
-                            <Button type="comment"/>
+                            <Button kind="comment"/>
                         </div>
                     </div>
                 </div>
