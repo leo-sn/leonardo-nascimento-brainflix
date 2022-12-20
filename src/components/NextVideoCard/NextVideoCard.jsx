@@ -7,9 +7,7 @@ const NextVideoCard = (props) => {
 
     return (
         <Link to={`/videos/${id}`} className='related-video-link'>
-            <div className='next-video-card-container' 
-                // onClick={() => {props.handleSelectedVideo(id)}}
-                >
+            <div className='next-video-card-container'>
                 <div className='next-video-card-container--img'>
                     <img src={image} alt="thumbnail"></img>
                 </div>

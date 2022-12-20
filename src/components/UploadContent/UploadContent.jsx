@@ -3,6 +3,7 @@ import thumbnail from '../../assets/images/Upload-video-preview.jpg'
 import Button from '../Button/Button'
 import Divider from '../Divider/Divider'
 import { useState } from 'react';
+import axios from 'axios';
 
 const UploadContent = () => {
 
@@ -10,16 +11,28 @@ const UploadContent = () => {
 
     const handleUploadSubmit = (e) => {
         e.preventDefault();
-        console.log(inputs)
 
-        //CREATE THE AXIOS POST CALL TO LOCALHOST:3030/videos
+        const dataToSend = {
+            link: inputs.link,
+            title: inputs.videoTitle,
+            description: inputs.videoDescription,
+            image: 'http://localhost:3030/images/teletubies.jpeg'
+        }
+
+
+        if(dataToSend.title && dataToSend.description){
+            axios.post('http://localhost:3030/videos/upload', dataToSend)
+            .then(alert('Your video was uploaded successfully! \n We will redirect you to the home page'))
+            .then(window.location.assign(`http://localhost:3000/`))
+        } else {
+            alert('You must fill the video title and video description fields.')
+        }
     }
 
     const handleChange = (event) => {
         const {name , value} = event.target;
         const url = 'link'
         setInputs(values => ({...values,[url]:'link',[name]: value}))
-        console.log(inputs)
       }
 
     return (
